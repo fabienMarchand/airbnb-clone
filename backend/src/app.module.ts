@@ -1,11 +1,14 @@
 import { Module } from '@nestjs/common';
+// import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { LocationModule } from './modules/locations/Location.module';
+import { CategoryModule } from './modules/categories/category.module';
 
 @Module({
   imports: [
+    // ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
       name: 'default',
       type: 'postgres',
@@ -20,6 +23,7 @@ import { LocationModule } from './modules/locations/Location.module';
       migrationsRun: true,
     }),
     LocationModule,
+    CategoryModule,
   ],
   controllers: [AppController],
   providers: [AppService],

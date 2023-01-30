@@ -22,3 +22,45 @@ export class ExampleLocationDto {
   @IsNumber()
   zzzz: number;
 }
+
+export class CreateLocationDto {
+  @IsNumber()
+  id: number;
+  @IsString()
+  title: string;
+  @IsString()
+  description: string;
+  @IsString()
+  location: string;
+  @IsString()
+  picture: string;
+  @IsNumber()
+  stars: number;
+  @IsNumber()
+  numberOfRooms: number;
+  @IsNumber()
+  price: number;
+  @IsNumber()
+  categoryId: number;
+}
+
+export class UpdateLocationDto {
+  @IsNumber()
+  id: number;
+  @IsString()
+  title: string;
+  @IsString()
+  description: string;
+  @IsString()
+  location: string;
+  @IsString()
+  picture: string;
+  @IsNumber()
+  stars: number;
+  @IsNumber()
+  numberOfRooms: number;
+  @IsNumber()
+  price: number;
+  @IsNumber()
+  categoryId: number;
+}
