@@ -27,7 +27,6 @@ const Header: React.FC<HeaderProps> = () => {
     } else {
       setSearchInput('');
       setIsValidateSearch(true);
-      console.log('empty');
     }
   };
 
