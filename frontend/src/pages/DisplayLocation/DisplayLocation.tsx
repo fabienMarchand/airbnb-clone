@@ -65,7 +65,10 @@ const DisplayLocationPage: React.FC<DisplayLocationPageProps> = () => {
     if (location) {
       await fetch(`http://localhost:8000/locations/${id}`, {
         method: 'PUT',
-        body: JSON.stringify(location)
+        body: JSON.stringify(location),
+        headers: {
+          'Content-Type': 'application/json'
+        }
       });
     }
   };
